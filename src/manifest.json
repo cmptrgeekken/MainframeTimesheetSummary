@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Mainframe Timesheet Summary",
+  "description": "Provides a toggleable area below the timesheet entry form to display the number of hours applied to each work order.",
+  "version": "0.5",
+  "icons": { "16": "icon16.png",
+             "48": "icon48.png",
+             "128": "icon128.png" },
+  "content_scripts": [
+	{
+		"matches": [
+			"https://mainframe.nerdery.com/timesheet.php*"
+		],
+		"js": ["jquery-2.2.0.min.js", "awesomplete.min.js", "content.js"],
+		"css": ["style.css"]
+	}
+	]
+}
